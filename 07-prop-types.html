@@ -10,10 +10,11 @@
     function SayHello({firstName, lastName}) {
       return (
         <div>
-          Hello {firstName} {lastName}!
+          Hello {firstName} {lastName}
         </div>
       )
     }
+
     SayHello.propTypes = {
       firstName: PropTypes.string.isRequired,
       lastName: PropTypes.string.isRequired,
@@ -24,3 +25,12 @@
     ReactDOM.render(element, rootElement)
   </script>
 </body>
+
+
+<!-- const PropTypes = {
+  string(props, propName, componentName) {
+    if (typeof props[propName] !== 'string') {
+      return new Error(`Hey, the ${component} needs the prop ${propName} to be a string but you passed ${typeof props[propName]}`)
+    }
+  }
+} -->
