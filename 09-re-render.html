@@ -9,14 +9,13 @@
     function tick() {
       const time = new Date().toLocaleTimeString()
       const element = (
-        <>
-          <input value={time} />
-          <input value={time} />
-        </>
-      )
+        <div>
+          <input value = {time} />
+          <input value = {time} />
+        </div>)
       ReactDOM.render(element, rootElement)
     }
-
+    tick()
     setInterval(tick, 1000)
   </script>
 </body>
