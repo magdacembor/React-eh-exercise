@@ -12,21 +12,20 @@
       function handleClick() {
         setState({eventCount: state.eventCount + 1})
       }
-
-      function handleChange(event) {
+      function handleChange() {
         setState({username: event.target.value})
       }
-
       return (
         <div>
-          <p>There have been {state.eventCount} events.</p>
+          <p>There have been {state.eventCount} events. </p>
           <p>
             <button onClick={handleClick}>Click Me</button>
           </p>
-          <p>You typed: {state.username}</p>
+          <p> You typed: {state.username}</p>
           <p>
-            <input onChange={handleChange} />
+            <input onChange={handleChange}/>
           </p>
+        
         </div>
       )
     }
@@ -43,3 +42,7 @@
     renderApp()
   </script>
 </body>
+
+<!-- onClick; onFocus; onMouseOver; 
+onBlur (click outside); onChange (with every update of input) -->
+<!-- event.nativeEvent -->
