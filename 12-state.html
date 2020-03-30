@@ -7,17 +7,23 @@
     function Greeting() {
       const [name, setName] = React.useState('')
       const handleChange = event => setName(event.target.value)
-      return (
-        <div>
-          <form>
-            <label htmlFor="name">Name: </label>
-            <input onChange={handleChange} id="name" />
-          </form>
-          {name ? <strong>Hello {name}</strong> : 'Please type your name'}
-        </div>
+      return ( <div>
+        <form>
+          <label htmlFor="name">Name: </label>
+          <input onChange={handleChange} id="name" />
+        </form>
+        {name ? <strong>Hello {name}</strong> : 'Please type your name'}
+      </div>
       )
     }
 
     ReactDOM.render(<Greeting />, document.getElementById('root'))
   </script>
 </body>
+
+<!--       const stateArray = React.useState('')
+      const name = stateArray[0]
+      const setName = stateArray[1]
+      const handleChange = event => setName(event.target.value) -->
+
+<!-- useState is a React hook -->
