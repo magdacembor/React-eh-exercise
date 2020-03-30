@@ -6,10 +6,11 @@
   <script type="text/babel">
     function Greeting() {
       const [name, setName] = React.useState(
-        () => window.localStorage.getItem('name') || '',
+       () => window.localStorage.getItem('name') || '',
       )
 
       React.useEffect(() => {
+        console.log('greeting use effect')
         window.localStorage.setItem('name', name)
       }, [name])
 
