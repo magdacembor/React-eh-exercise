@@ -45,21 +45,19 @@
   <script type="text/babel">
     function Tilt({children}) {
       const tiltRef = React.useRef()
-
       React.useEffect(() => {
         const tiltNode = tiltRef.current
         const vanillaTiltOptions = {
           max: 25,
           speed: 400,
           glare: true,
-          'max-glare': 0.5,
+          'max-glare': 0.5
         }
         VanillaTilt.init(tiltNode, vanillaTiltOptions)
         return () => {
-          tiltNode.vanillaTilt.destroy()
+          tiltNode.VanillaTilt.destroy()
         }
       }, [])
-
       return (
         <div ref={tiltRef} className="tilt-root">
           <div className="tilt-child">{children}</div>
