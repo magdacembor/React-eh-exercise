@@ -6,24 +6,22 @@
   <script type="text/babel">
     function PokemonInfo({pokemonName}) {
       const [pokemon, setPokemon] = React.useState(null)
-
       React.useEffect(() => {
         if (!pokemonName) {
           return
         }
-        fetchPokemon(pokemonName).then(pokemonData => {
-          setPokemon(pokemonData)
-        })
+        fetchPokemon(pokemonName).then(
+          pokemonData => {
+            setPokemon(pokemonData)
+          }
+        )
       }, [pokemonName])
-
-      if (!pokemonName) {
+      if(!pokemonName) {
         return 'Submit a pokemon'
       }
-
       if (!pokemon) {
         return '...'
       }
-
       return <pre>{JSON.stringify(pokemon, null, 2)}</pre>
     }
 
